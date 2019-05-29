@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: visit-counter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: visit-counter
+  template:
+    metadata:
+      labels:
+        app: visit-counter
+    spec:
+      containers:
+        - name: visit-counter
+          image: ematos/visit-counter:1.0
+          env:
+            - name: "REDIS_HOST"
+              value: "redis-service"
+            - name: "REDIS_PORT"
+              value: "9000"

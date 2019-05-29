@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-for-visit-counter
+  labels:
+    app: redis-for-visit-counter
+spec:
+  containers:
+    - name: redis
+      image: redis
