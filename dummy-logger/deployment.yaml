@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: dummy-logger-deployment
 spec:
+  replicas: 4
   selector:
     matchLabels:
       app: dummy-logger-deployment
