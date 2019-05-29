@@ -5,4 +5,4 @@ metadata:
 spec:
   containers:
   - name: logger-container
-    image: ematos/dummy-logger:1.0
+    image: ematos/dummy-logger:2.0
