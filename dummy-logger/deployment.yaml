@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-logger-deployment
+spec:
+  selector:
+    matchLabels:
+      app: dummy-logger-deployment
+  template:
+    metadata:
+      labels:
+        app: dummy-logger-deployment
+    spec:
+      containers:
+        - name: my-container
+          image: ematos/dummy-logger:2.0
